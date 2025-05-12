@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio website of Gavin" />
+  <title>Home - Gavin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    h1 {
+      color: white;
+    }
+
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px 0;
+    }
+
+    table th, table td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    form label,
+    form input {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    section:last-of-type {
+      margin-bottom: 50px;
+    }
+
+    .card {
+      margin-bottom: 20px;
+    }
+
+    .featured-projects {
+      margin-top: 40px;
+    }
+
+    .featured-projects img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Gavin's Portfolio</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About Me</a>
+</nav>
+
+<main>
+  <h2>Welcome</h2>
+  <p style="color: black;">Welcome to my Portfolio! Here you will find projects I've made, my experience, contact information, and more!</p>
+
+  <section>
+    <div class="card mt-5" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Front-End Development</h5>
+        <p class="card-text">I enjoy front-end development and am currently working on improving and honing my skills in the area.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Experience</h3>
+    <table border="1">
+      <tr>
+        <th>Technology</th>
+        <th>Expert</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Beginner</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>Beginner</td>
+      </tr>
+      <tr>
+        <td>Blocks</td>
+        <td>Intermediate</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h3>Contact Form</h3>
+    <form onsubmit="handleSubmit(event)">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required><br />
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <section>
+    <h3>External Links</h3>
+    <ul>
+      <li><a href="https://github.com/gavabell" target="_blank">GitHub Repository</a></li>
+      <li><a href="https://www.sictc.com/" target="_blank">SICTC Website</a></li>
+    </ul>
+  </section>
+
+  <section class="featured-projects">
+    <h3>Featured Projects</h3>
+    <div class="project-grid">
+      <div>
+        <img src="Project1.png" alt="Screenshot of Project 1" />
+      </div>
+      <div>
+        <img src="Project2.png" alt="Screenshot of Project 2" />
+      </div>
+      <div>
+        <img src="Project3.png" alt="Screenshot of Project 3" />
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Gavin Abell</p>
+</footer>
+
+<script>
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert("Form submitted!");
+  }
+</script>
+
+</body>
+</html>
